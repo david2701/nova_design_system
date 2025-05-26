@@ -1,5 +1,5 @@
 name: nova_design_system
-description: A new Flutter project.
+description: A comprehensive Flutter design system that provides a consistent, accessible, and customizable UI component library for building beautiful applications. Includes a wide range of components, utilities, and animations following Material Design principles.
 publish_to: 'none'
 version: 1.0.0
 
