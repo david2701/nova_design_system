@@ -1,5 +1,39 @@
 # Changelog
 
+## [1.1.0] - 2025-05-27
+
+### Added
+- **Widgetbook Showcases for Basic Components**
+  - Buttons showcase (NovaButton, NovaElevatedButton, NovaOutlinedButton, NovaTextButton, NovaIconButton, NovaFab)
+  - Avatar showcase with multiple variants, sizes, and states
+  - Badge & Chip showcase with comprehensive examples
+  - Controls showcase (NovaSlider, NovaSwitch, NovaProgressIndicator)
+  - Miscellaneous showcase (NovaTooltip, NovaDivider)
+
+### Improved
+- **NovaButton Component**
+  - Fixed overflow issues with icon buttons
+  - Improved layout system using Material + InkWell
+  - Better handling of content with and without icons
+  - Enhanced responsive behavior
+
+- **Widgetbook Structure**
+  - Professional showcase organization with Components > Basics folder
+  - Consistent demo card layouts with BoxConstraints for better responsiveness
+  - Interactive examples with state management
+  - Comprehensive variant demonstrations
+
+### Fixed
+- RenderFlex overflow errors in button components
+- Layout constraints in showcase demo cards
+- Button content alignment and spacing issues
+
+### Technical Improvements
+- Enhanced component APIs verification
+- Better showcase organization and navigation
+- Improved visual consistency across all showcases
+- Professional documentation and examples
+
 ## [1.0.0] - 2024-05-20
 
 ### Added

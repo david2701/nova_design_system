@@ -1,0 +1,28 @@
+name: example
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  nova_design_system:
+    path: ../
+  widgetbook: ^3.14.2
+  widgetbook_annotation: ^3.5.0
+  device_frame_plus: ^1.0.0
+  accessibility_tools: ^2.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  build_runner: ^2.4.8
+  widgetbook_generator: ^3.13.0
+
+flutter:
+  uses-material-design: true 

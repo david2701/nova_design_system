@@ -125,6 +125,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-- [GitHub Issues](https://github.com/yourusername/nova_design_system/issues)
-- [Discord Community](https://discord.gg/novadesignsystem)
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/nova-design-system)
+- [GitHub Issues](https://github.com/david2701/nova_design_system/issues)

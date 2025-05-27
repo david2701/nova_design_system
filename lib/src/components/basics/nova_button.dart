@@ -58,22 +58,26 @@ class NovaButton extends StatelessWidget {
 
   Widget _buildButton(bool isEnabled) {
     final buttonStyle = _getButtonStyle(isEnabled);
-    final buttonHeight = _getButtonHeight();
     final buttonPadding = _getButtonPadding();
 
-    return Container(
-      height: buttonHeight,
-      padding: buttonPadding,
-      decoration: BoxDecoration(
-        color: buttonStyle.backgroundColor,
-        borderRadius: BorderRadius.circular(NovaRadius.md),
-        border: buttonStyle.border,
-      ),
+    return Material(
+      color: buttonStyle.backgroundColor,
+      borderRadius: BorderRadius.circular(NovaRadius.md),
       child: InkWell(
         onTap: isEnabled ? onPressed : null,
         borderRadius: BorderRadius.circular(NovaRadius.md),
-        child: Center(
-          child: _buildContent(),
+        child: Container(
+          constraints: BoxConstraints(
+            minHeight: _getButtonHeight(),
+          ),
+          padding: buttonPadding,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(NovaRadius.md),
+            border: buttonStyle.border,
+          ),
+          child: Center(
+            child: _buildContent(),
+          ),
         ),
       ),
     );
@@ -95,6 +99,12 @@ class NovaButton extends StatelessWidget {
       );
     }
 
+    // Si no hay iconos, retornar el contenido directamente sin restricciones
+    if (leftIcon == null && rightIcon == null) {
+      return child;
+    }
+
+    // Si hay iconos, usar un Row flexible
     return Row(
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.center,
@@ -103,7 +113,9 @@ class NovaButton extends StatelessWidget {
           leftIcon!,
           SizedBox(width: NovaSpacing.xs),
         ],
-        child,
+        Flexible(
+          child: child,
+        ),
         if (rightIcon != null) ...[
           SizedBox(width: NovaSpacing.xs),
           rightIcon!,

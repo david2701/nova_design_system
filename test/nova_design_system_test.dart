@@ -10,7 +10,7 @@ void main() {
   group('NovaLinearProgress', () {
     testWidgets('renders with default values', (WidgetTester tester) async {
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: Scaffold(
             body: NovaLinearProgress(
               value: 0.5,
@@ -25,7 +25,7 @@ void main() {
 
     testWidgets('renders with indeterminate state', (WidgetTester tester) async {
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: Scaffold(
             body: NovaLinearProgress(
               indeterminate: true,
@@ -39,7 +39,7 @@ void main() {
 
     testWidgets('renders with label and value', (WidgetTester tester) async {
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: Scaffold(
             body: NovaLinearProgress(
               value: 0.75,

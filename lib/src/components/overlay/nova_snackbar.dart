@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nova_design_system/src/tokens/nova_colors.dart';
-import 'package:nova_design_system/src/tokens/nova_spacing.dart';
+import 'package:nova_design_system/nova_design_system.dart';
 
 enum NovaSnackbarVariant {
   primary,
@@ -47,8 +46,8 @@ class NovaSnackbar {
         textColor: textColor,
       ),
       duration: duration,
-      margin: margin ?? EdgeInsets.all(NovaSpacing.md),
-      padding: padding ?? EdgeInsets.all(NovaSpacing.md),
+      margin: margin ?? const EdgeInsets.all(NovaSpacing.md),
+      padding: padding ?? const EdgeInsets.all(NovaSpacing.md),
       backgroundColor: backgroundColor ?? _getBackgroundColor(variant),
       shape: RoundedRectangleBorder(
         borderRadius: borderRadius ?? BorderRadius.circular(8),
@@ -63,17 +62,17 @@ class NovaSnackbar {
   static Color _getBackgroundColor(NovaSnackbarVariant variant) {
     switch (variant) {
       case NovaSnackbarVariant.primary:
-        return NovaColors.primary500;
+        return NovaColors.primary;
       case NovaSnackbarVariant.secondary:
-        return NovaColors.secondary500;
+        return NovaColors.secondary;
       case NovaSnackbarVariant.success:
-        return NovaColors.success500;
+        return NovaColors.success;
       case NovaSnackbarVariant.warning:
-        return NovaColors.warning500;
+        return NovaColors.warning;
       case NovaSnackbarVariant.error:
-        return NovaColors.error500;
+        return NovaColors.error;
       case NovaSnackbarVariant.info:
-        return NovaColors.info500;
+        return NovaColors.info;
     }
   }
 }
@@ -113,7 +112,7 @@ class _NovaSnackbarContent extends StatelessWidget {
             height: iconSize,
             child: icon,
           ),
-          SizedBox(width: NovaSpacing.sm),
+          const SizedBox(width: NovaSpacing.sm),
         ],
         Expanded(
           child: Column(
@@ -123,11 +122,11 @@ class _NovaSnackbarContent extends StatelessWidget {
               if (title != null) ...[
                 Text(
                   title!,
-                  style: textStyle.copyWith(
+                  style: textStyle?.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: NovaSpacing.xs),
+                const SizedBox(height: NovaSpacing.xs),
               ],
               Text(
                 message,
@@ -137,11 +136,11 @@ class _NovaSnackbarContent extends StatelessWidget {
           ),
         ),
         if (action != null) ...[
-          SizedBox(width: NovaSpacing.sm),
+          const SizedBox(width: NovaSpacing.sm),
           action!,
         ],
         if (showCloseIcon) ...[
-          SizedBox(width: NovaSpacing.sm),
+          const SizedBox(width: NovaSpacing.sm),
           IconButton(
             icon: Icon(
               Icons.close,
@@ -170,7 +169,7 @@ class _NovaSnackbarContent extends StatelessWidget {
     }
   }
 
-  TextStyle _getTextStyle(BuildContext context, Color color) {
+  TextStyle? _getTextStyle(BuildContext context, Color color) {
     final baseStyle = Theme.of(context).textTheme.bodyMedium?.copyWith(
       color: color,
     );
