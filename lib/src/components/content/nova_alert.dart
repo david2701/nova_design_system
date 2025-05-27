@@ -106,26 +106,26 @@ class NovaAlert extends StatelessWidget {
   Color _getBackgroundColor() {
     switch (variant) {
       case NovaAlertVariant.info:
-        return NovaColors.info.withOpacity(0.1);
+        return NovaColors.info.withValues(alpha: 0.1);
       case NovaAlertVariant.success:
-        return NovaColors.success.withOpacity(0.1);
+        return NovaColors.success.withValues(alpha: 0.1);
       case NovaAlertVariant.warning:
-        return NovaColors.warning.withOpacity(0.1);
+        return NovaColors.warning.withValues(alpha: 0.1);
       case NovaAlertVariant.error:
-        return NovaColors.error.withOpacity(0.1);
+        return NovaColors.error.withValues(alpha: 0.1);
     }
   }
 
   Color _getBorderColor() {
     switch (variant) {
       case NovaAlertVariant.info:
-        return NovaColors.info.withOpacity(0.2);
+        return NovaColors.info.withValues(alpha: 0.2);
       case NovaAlertVariant.success:
-        return NovaColors.success.withOpacity(0.2);
+        return NovaColors.success.withValues(alpha: 0.2);
       case NovaAlertVariant.warning:
-        return NovaColors.warning.withOpacity(0.2);
+        return NovaColors.warning.withValues(alpha: 0.2);
       case NovaAlertVariant.error:
-        return NovaColors.error.withOpacity(0.2);
+        return NovaColors.error.withValues(alpha: 0.2);
     }
   }
 

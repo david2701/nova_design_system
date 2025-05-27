@@ -61,14 +61,14 @@ class NovaChip extends StatelessWidget {
         children: [
           if (avatar != null) ...[
             avatar!,
-            SizedBox(width: NovaSpacing.xs),
+            const SizedBox(width: NovaSpacing.xs),
           ],
           Text(
             label,
             style: _getTextStyle(),
           ),
           if (onDeleted != null) ...[
-            SizedBox(width: NovaSpacing.xs),
+            const SizedBox(width: NovaSpacing.xs),
             GestureDetector(
               onTap: isDisabled ? null : onDeleted,
               child: deleteIcon ??
@@ -90,15 +90,15 @@ class NovaChip extends StatelessWidget {
 
     switch (variant) {
       case NovaChipVariant.primary:
-        return NovaColors.primary.withOpacity(0.1);
+        return NovaColors.primary.withValues(alpha: 0.1);
       case NovaChipVariant.secondary:
-        return NovaColors.secondary.withOpacity(0.1);
+        return NovaColors.secondary.withValues(alpha: 0.1);
       case NovaChipVariant.success:
-        return NovaColors.success.withOpacity(0.1);
+        return NovaColors.success.withValues(alpha: 0.1);
       case NovaChipVariant.warning:
-        return NovaColors.warning.withOpacity(0.1);
+        return NovaColors.warning.withValues(alpha: 0.1);
       case NovaChipVariant.danger:
-        return NovaColors.error.withOpacity(0.1);
+        return NovaColors.error.withValues(alpha: 0.1);
       case NovaChipVariant.neutral:
         return NovaColors.neutral200;
     }
@@ -126,15 +126,15 @@ class NovaChip extends StatelessWidget {
 
     switch (variant) {
       case NovaChipVariant.primary:
-        return Border.all(color: NovaColors.primary.withOpacity(0.3));
+        return Border.all(color: NovaColors.primary.withValues(alpha: 0.3));
       case NovaChipVariant.secondary:
-        return Border.all(color: NovaColors.secondary.withOpacity(0.3));
+        return Border.all(color: NovaColors.secondary.withValues(alpha: 0.3));
       case NovaChipVariant.success:
-        return Border.all(color: NovaColors.success.withOpacity(0.3));
+        return Border.all(color: NovaColors.success.withValues(alpha: 0.3));
       case NovaChipVariant.warning:
-        return Border.all(color: NovaColors.warning.withOpacity(0.3));
+        return Border.all(color: NovaColors.warning.withValues(alpha: 0.3));
       case NovaChipVariant.danger:
-        return Border.all(color: NovaColors.error.withOpacity(0.3));
+        return Border.all(color: NovaColors.error.withValues(alpha: 0.3));
       case NovaChipVariant.neutral:
         return Border.all(color: NovaColors.neutral300);
     }
@@ -193,12 +193,12 @@ class NovaChip extends StatelessWidget {
   EdgeInsets _getPadding() {
     switch (size) {
       case NovaChipSize.small:
-        return EdgeInsets.symmetric(
+        return const EdgeInsets.symmetric(
           horizontal: NovaSpacing.sm,
           vertical: NovaSpacing.xs,
         );
       case NovaChipSize.medium:
-        return EdgeInsets.symmetric(
+        return const EdgeInsets.symmetric(
           horizontal: NovaSpacing.md,
           vertical: NovaSpacing.sm,
         );

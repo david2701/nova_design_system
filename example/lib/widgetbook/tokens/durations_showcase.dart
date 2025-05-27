@@ -140,7 +140,7 @@ class DurationsShowcase extends StatelessWidget {
         border: Border.all(color: Colors.grey.shade200),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -310,13 +310,13 @@ class _AnimatedDurationDemoState extends State<_AnimatedDurationDemo>
                           borderRadius: BorderRadius.circular(12),
                           boxShadow: [
                             BoxShadow(
-                              color: (_colorAnimation.value ?? Colors.blue).withOpacity(0.3),
+                              color: (_colorAnimation.value ?? Colors.blue).withValues(alpha: 0.3),
                               blurRadius: 12,
                               spreadRadius: 2,
                             ),
                           ],
                         ),
-                        child: Center(
+                        child: const Center(
                           child: Icon(
                             Icons.play_arrow,
                             color: Colors.white,

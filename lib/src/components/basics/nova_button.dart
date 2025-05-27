@@ -111,13 +111,13 @@ class NovaButton extends StatelessWidget {
       children: [
         if (leftIcon != null) ...[
           leftIcon!,
-          SizedBox(width: NovaSpacing.xs),
+          const SizedBox(width: NovaSpacing.xs),
         ],
         Flexible(
           child: child,
         ),
         if (rightIcon != null) ...[
-          SizedBox(width: NovaSpacing.xs),
+          const SizedBox(width: NovaSpacing.xs),
           rightIcon!,
         ],
       ],
@@ -145,7 +145,7 @@ class NovaButton extends StatelessWidget {
           ),
         );
       case NovaButtonVariant.ghost:
-        return _ButtonStyle(
+        return const _ButtonStyle(
           backgroundColor: Colors.transparent,
           border: null,
         );
@@ -166,17 +166,17 @@ class NovaButton extends StatelessWidget {
   EdgeInsets _getButtonPadding() {
     switch (size) {
       case NovaButtonSize.small:
-        return EdgeInsets.symmetric(
+        return const EdgeInsets.symmetric(
           horizontal: NovaSpacing.sm,
           vertical: NovaSpacing.xs,
         );
       case NovaButtonSize.medium:
-        return EdgeInsets.symmetric(
+        return const EdgeInsets.symmetric(
           horizontal: NovaSpacing.md,
           vertical: NovaSpacing.sm,
         );
       case NovaButtonSize.large:
-        return EdgeInsets.symmetric(
+        return const EdgeInsets.symmetric(
           horizontal: NovaSpacing.lg,
           vertical: NovaSpacing.md,
         );

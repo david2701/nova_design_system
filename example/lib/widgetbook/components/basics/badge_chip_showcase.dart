@@ -31,68 +31,68 @@ class NovaBadgeShowcase extends StatelessWidget {
           const SizedBox(height: 32),
           
           _buildVariantSection('Basic Badges', [
-            _ComponentDemo('Count Badge', NovaBadge(
+            _ComponentDemo('Count Badge', const NovaBadge(
               count: 3,
               variant: NovaBadgeVariant.primary,
             )),
-            _ComponentDemo('Label Badge', NovaBadge(
+            _ComponentDemo('Label Badge', const NovaBadge(
               label: 'New',
               variant: NovaBadgeVariant.success,
             )),
-            _ComponentDemo('Dot Badge', NovaBadge(
+            _ComponentDemo('Dot Badge', const NovaBadge(
               variant: NovaBadgeVariant.danger,
               dot: true,
             )),
           ]),
           
           _buildVariantSection('Badge Variants', [
-            _ComponentDemo('Primary', NovaBadge(
+            _ComponentDemo('Primary', const NovaBadge(
               label: 'Primary',
               variant: NovaBadgeVariant.primary,
             )),
-            _ComponentDemo('Secondary', NovaBadge(
+            _ComponentDemo('Secondary', const NovaBadge(
               label: 'Secondary',
               variant: NovaBadgeVariant.secondary,
             )),
-            _ComponentDemo('Success', NovaBadge(
+            _ComponentDemo('Success', const NovaBadge(
               label: 'Success',
               variant: NovaBadgeVariant.success,
             )),
-            _ComponentDemo('Warning', NovaBadge(
+            _ComponentDemo('Warning', const NovaBadge(
               label: 'Warning',
               variant: NovaBadgeVariant.warning,
             )),
-            _ComponentDemo('Danger', NovaBadge(
+            _ComponentDemo('Danger', const NovaBadge(
               label: 'Danger',
               variant: NovaBadgeVariant.danger,
             )),
-            _ComponentDemo('Neutral', NovaBadge(
+            _ComponentDemo('Neutral', const NovaBadge(
               label: 'Neutral',
               variant: NovaBadgeVariant.neutral,
             )),
           ]),
           
           _buildVariantSection('Badge Sizes', [
-            _ComponentDemo('Small', NovaBadge(
+            _ComponentDemo('Small', const NovaBadge(
               label: 'Small',
               size: NovaBadgeSize.small,
             )),
-            _ComponentDemo('Medium', NovaBadge(
+            _ComponentDemo('Medium', const NovaBadge(
               label: 'Medium',
               size: NovaBadgeSize.medium,
             )),
           ]),
           
           _buildVariantSection('Count Badges', [
-            _ComponentDemo('Count 5', NovaBadge(
+            _ComponentDemo('Count 5', const NovaBadge(
               count: 5,
               variant: NovaBadgeVariant.primary,
             )),
-            _ComponentDemo('Count 99', NovaBadge(
+            _ComponentDemo('Count 99', const NovaBadge(
               count: 99,
               variant: NovaBadgeVariant.danger,
             )),
-            _ComponentDemo('Max Count', NovaBadge(
+            _ComponentDemo('Max Count', const NovaBadge(
               count: 150,
               maxCount: 99,
               variant: NovaBadgeVariant.warning,
@@ -100,7 +100,7 @@ class NovaBadgeShowcase extends StatelessWidget {
           ]),
           
           _buildVariantSection('Badge with Icons', [
-            _ComponentDemo('With Icon', Stack(
+            _ComponentDemo('With Icon', const Stack(
               children: [
                 Icon(Icons.notifications, size: 32, color: Colors.grey),
                 Positioned(
@@ -113,7 +113,7 @@ class NovaBadgeShowcase extends StatelessWidget {
                 ),
               ],
             )),
-            _ComponentDemo('Dot on Avatar', Stack(
+            _ComponentDemo('Dot on Avatar', const Stack(
               children: [
                 NovaAvatar(
                   size: NovaAvatarSize.large,
@@ -151,10 +151,10 @@ class NovaChipShowcase extends StatelessWidget {
           const SizedBox(height: 32),
           
           _buildVariantSection('Basic Chips', [
-            _ComponentDemo('Simple Chip', NovaChip(
+            _ComponentDemo('Simple Chip', const NovaChip(
               label: 'Simple Chip',
             )),
-            _ComponentDemo('With Avatar', NovaChip(
+            _ComponentDemo('With Avatar', const NovaChip(
               label: 'John Doe',
               avatar: NovaAvatar(
                 size: NovaAvatarSize.small,
@@ -168,38 +168,38 @@ class NovaChipShowcase extends StatelessWidget {
           ]),
           
           _buildVariantSection('Chip Variants', [
-            _ComponentDemo('Primary', NovaChip(
+            _ComponentDemo('Primary', const NovaChip(
               label: 'Primary',
               variant: NovaChipVariant.primary,
             )),
-            _ComponentDemo('Secondary', NovaChip(
+            _ComponentDemo('Secondary', const NovaChip(
               label: 'Secondary',
               variant: NovaChipVariant.secondary,
             )),
-            _ComponentDemo('Success', NovaChip(
+            _ComponentDemo('Success', const NovaChip(
               label: 'Success',
               variant: NovaChipVariant.success,
             )),
-            _ComponentDemo('Warning', NovaChip(
+            _ComponentDemo('Warning', const NovaChip(
               label: 'Warning',
               variant: NovaChipVariant.warning,
             )),
-            _ComponentDemo('Danger', NovaChip(
+            _ComponentDemo('Danger', const NovaChip(
               label: 'Danger',
               variant: NovaChipVariant.danger,
             )),
-            _ComponentDemo('Neutral', NovaChip(
+            _ComponentDemo('Neutral', const NovaChip(
               label: 'Neutral',
               variant: NovaChipVariant.neutral,
             )),
           ]),
           
           _buildVariantSection('Chip Sizes', [
-            _ComponentDemo('Small', NovaChip(
+            _ComponentDemo('Small', const NovaChip(
               label: 'Small',
               size: NovaChipSize.small,
             )),
-            _ComponentDemo('Medium', NovaChip(
+            _ComponentDemo('Medium', const NovaChip(
               label: 'Medium',
               size: NovaChipSize.medium,
             )),
@@ -218,26 +218,26 @@ class NovaChipShowcase extends StatelessWidget {
             _ComponentDemo('With Custom Delete', NovaChip(
               label: 'Custom Delete',
               onDeleted: () => print('Deleted'),
-              deleteIcon: Icon(Icons.remove_circle, size: 16),
+              deleteIcon: const Icon(Icons.remove_circle, size: 16),
             )),
           ]),
           
           _buildVariantSection('Chip States', [
-            _ComponentDemo('Default', NovaChip(
+            _ComponentDemo('Default', const NovaChip(
               label: 'Default',
             )),
-            _ComponentDemo('Selected', NovaChip(
+            _ComponentDemo('Selected', const NovaChip(
               label: 'Selected',
               isSelected: true,
             )),
-            _ComponentDemo('Disabled', NovaChip(
+            _ComponentDemo('Disabled', const NovaChip(
               label: 'Disabled',
               isDisabled: true,
             )),
           ]),
           
           _buildVariantSection('Chip Groups', [
-            _ComponentDemo('Filter Chips', Wrap(
+            _ComponentDemo('Filter Chips', const Wrap(
               spacing: 8,
               children: [
                 NovaChip(label: 'All', isSelected: true),
@@ -334,7 +334,7 @@ Widget _buildDemoCard(_ComponentDemo demo) {
       border: Border.all(color: Colors.grey.shade200),
       boxShadow: [
         BoxShadow(
-          color: Colors.black.withOpacity(0.05),
+          color: Colors.black.withValues(alpha: 0.05),
           blurRadius: 8,
           offset: const Offset(0, 2),
         ),

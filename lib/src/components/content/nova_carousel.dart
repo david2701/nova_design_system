@@ -190,7 +190,7 @@ class _NovaCarouselState extends State<NovaCarousel> {
             icon,
             color: onPressed != null
                 ? _getControlIconColor()
-                : _getControlIconColor().withOpacity(0.5),
+                : _getControlIconColor().withValues(alpha: 0.5),
             size: _getControlIconSize(),
           ),
         ),
@@ -247,7 +247,7 @@ class _NovaCarouselState extends State<NovaCarousel> {
     if (isActive) {
       return _getStatusColor();
     }
-    return _getStatusColor().withOpacity(0.3);
+    return _getStatusColor().withValues(alpha: 0.3);
   }
 
   Color _getControlBackgroundColor() {
@@ -265,7 +265,7 @@ class _NovaCarouselState extends State<NovaCarousel> {
     switch (widget.variant) {
       case NovaCarouselVariant.primary:
       case NovaCarouselVariant.secondary:
-        return NovaColors.textInverse.withOpacity(0.1);
+        return NovaColors.textInverse.withValues(alpha: 0.1);
       case NovaCarouselVariant.surface:
       case NovaCarouselVariant.transparent:
         return NovaColors.neutral200;

@@ -143,7 +143,7 @@ class NovaCard extends StatelessWidget {
       case NovaCardVariant.elevated:
         return BorderSide.none;
       case NovaCardVariant.outlined:
-        return BorderSide(color: NovaColors.neutral200);
+        return const BorderSide(color: NovaColors.neutral200);
       case NovaCardVariant.filled:
         return BorderSide.none;
     }

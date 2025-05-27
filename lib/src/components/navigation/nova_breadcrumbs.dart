@@ -96,7 +96,7 @@ class NovaBreadcrumbs extends StatelessWidget {
     switch (variant) {
       case NovaBreadcrumbsVariant.primary:
       case NovaBreadcrumbsVariant.secondary:
-        return NovaColors.textInverse.withOpacity(0.6);
+        return NovaColors.textInverse.withValues(alpha: 0.6);
       case NovaBreadcrumbsVariant.surface:
       case NovaBreadcrumbsVariant.transparent:
         return NovaColors.neutral500;
@@ -107,7 +107,7 @@ class NovaBreadcrumbs extends StatelessWidget {
     switch (variant) {
       case NovaBreadcrumbsVariant.primary:
       case NovaBreadcrumbsVariant.secondary:
-        return NovaColors.textInverse.withOpacity(0.4);
+        return NovaColors.textInverse.withValues(alpha: 0.4);
       case NovaBreadcrumbsVariant.surface:
       case NovaBreadcrumbsVariant.transparent:
         return NovaColors.neutral400;

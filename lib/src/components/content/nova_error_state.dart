@@ -130,7 +130,7 @@ class NovaErrorState extends StatelessWidget {
       case NovaErrorStateVariant.primary:
         return NovaColors.error;
       case NovaErrorStateVariant.secondary:
-        return NovaColors.error.withOpacity(0.8);
+        return NovaColors.error.withValues(alpha: 0.8);
       case NovaErrorStateVariant.surface:
       case NovaErrorStateVariant.transparent:
         return NovaColors.textPrimary;

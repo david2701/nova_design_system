@@ -113,12 +113,12 @@ class NovaBadge extends StatelessWidget {
   EdgeInsets _getPadding() {
     switch (size) {
       case NovaBadgeSize.small:
-        return EdgeInsets.symmetric(
+        return const EdgeInsets.symmetric(
           horizontal: NovaSpacing.xs,
           vertical: 2,
         );
       case NovaBadgeSize.medium:
-        return EdgeInsets.symmetric(
+        return const EdgeInsets.symmetric(
           horizontal: NovaSpacing.sm,
           vertical: 4,
         );

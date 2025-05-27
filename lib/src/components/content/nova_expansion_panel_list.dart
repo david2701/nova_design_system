@@ -73,7 +73,7 @@ class NovaExpansionPanelList extends StatelessWidget {
     switch (variant) {
       case NovaExpansionPanelListVariant.primary:
       case NovaExpansionPanelListVariant.secondary:
-        return NovaColors.textInverse.withOpacity(0.1);
+        return NovaColors.textInverse.withValues(alpha: 0.1);
       case NovaExpansionPanelListVariant.surface:
       case NovaExpansionPanelListVariant.transparent:
         return NovaColors.neutral200;
@@ -83,9 +83,9 @@ class NovaExpansionPanelList extends StatelessWidget {
   Color _getBackgroundColor() {
     switch (variant) {
       case NovaExpansionPanelListVariant.primary:
-        return NovaColors.primary.withOpacity(0.05);
+        return NovaColors.primary.withValues(alpha: 0.05);
       case NovaExpansionPanelListVariant.secondary:
-        return NovaColors.secondary.withOpacity(0.05);
+        return NovaColors.secondary.withValues(alpha: 0.05);
       case NovaExpansionPanelListVariant.surface:
         return NovaColors.surface;
       case NovaExpansionPanelListVariant.transparent:

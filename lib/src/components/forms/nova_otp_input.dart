@@ -82,7 +82,7 @@ class NovaOtpInput extends StatelessWidget {
           ),
         ),
         if (errorText != null) ...[
-          SizedBox(height: NovaSpacing.xs),
+          const SizedBox(height: NovaSpacing.xs),
           Text(
             errorText!,
             style: _getErrorStyle(),
@@ -214,7 +214,7 @@ class _OtpDigitField extends StatelessWidget {
       case NovaOtpInputVariant.outlined:
         return OutlineInputBorder(
           borderRadius: BorderRadius.circular(NovaRadius.md),
-          borderSide: BorderSide(
+          borderSide: const BorderSide(
             color: NovaColors.primary,
             width: 2,
           ),
@@ -222,7 +222,7 @@ class _OtpDigitField extends StatelessWidget {
       case NovaOtpInputVariant.filled:
         return UnderlineInputBorder(
           borderRadius: BorderRadius.circular(NovaRadius.md),
-          borderSide: BorderSide(
+          borderSide: const BorderSide(
             color: NovaColors.primary,
             width: 2,
           ),
@@ -233,7 +233,7 @@ class _OtpDigitField extends StatelessWidget {
   InputBorder _getErrorBorder() {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(NovaRadius.md),
-      borderSide: BorderSide(
+      borderSide: const BorderSide(
         color: NovaColors.error,
         width: 1,
       ),
@@ -243,7 +243,7 @@ class _OtpDigitField extends StatelessWidget {
   InputBorder _getDisabledBorder() {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(NovaRadius.md),
-      borderSide: BorderSide(
+      borderSide: const BorderSide(
         color: NovaColors.neutral300,
         width: 1,
       ),

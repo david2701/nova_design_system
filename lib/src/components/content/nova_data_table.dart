@@ -151,7 +151,7 @@ class NovaDataTable extends StatelessWidget {
     switch (variant) {
       case NovaDataTableVariant.primary:
       case NovaDataTableVariant.secondary:
-        return NovaColors.textInverse.withOpacity(0.1);
+        return NovaColors.textInverse.withValues(alpha: 0.1);
       case NovaDataTableVariant.surface:
       case NovaDataTableVariant.transparent:
         return NovaColors.neutral200;

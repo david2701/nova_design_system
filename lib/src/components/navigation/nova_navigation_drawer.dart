@@ -53,16 +53,16 @@ class NovaNavigationDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return NavigationDrawer(
-      children: [
-        if (child != null) child!,
-        ...children,
-      ],
       elevation: elevation,
       backgroundColor: _getBackgroundColor(),
       surfaceTintColor: surfaceTintColor,
       shadowColor: shadowColor,
       indicatorColor: _getIndicatorColor(),
       indicatorShape: _getIndicatorShape(),
+      children: [
+        if (child != null) child!,
+        ...children,
+      ],
     );
   }
 
@@ -85,10 +85,10 @@ class NovaNavigationDrawer extends StatelessWidget {
     switch (variant) {
       case NovaNavigationDrawerVariant.primary:
       case NovaNavigationDrawerVariant.secondary:
-        return NovaColors.textInverse.withOpacity(0.1);
+        return NovaColors.textInverse.withValues(alpha: 0.1);
       case NovaNavigationDrawerVariant.surface:
       case NovaNavigationDrawerVariant.transparent:
-        return NovaColors.primary.withOpacity(0.1);
+        return NovaColors.primary.withValues(alpha: 0.1);
     }
   }
 

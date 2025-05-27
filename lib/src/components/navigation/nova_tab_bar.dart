@@ -127,7 +127,7 @@ class NovaTabBar extends StatelessWidget implements PreferredSizeWidget {
     switch (variant) {
       case NovaTabBarVariant.primary:
       case NovaTabBarVariant.secondary:
-        return NovaColors.textInverse.withOpacity(0.1);
+        return NovaColors.textInverse.withValues(alpha: 0.1);
       case NovaTabBarVariant.surface:
       case NovaTabBarVariant.transparent:
         return NovaColors.neutral200;
@@ -153,7 +153,7 @@ class NovaTabBar extends StatelessWidget implements PreferredSizeWidget {
     switch (variant) {
       case NovaTabBarVariant.primary:
       case NovaTabBarVariant.secondary:
-        return NovaColors.textInverse.withOpacity(0.6);
+        return NovaColors.textInverse.withValues(alpha: 0.6);
       case NovaTabBarVariant.surface:
       case NovaTabBarVariant.transparent:
         return NovaColors.neutral500;

@@ -76,7 +76,7 @@ class NovaSlider extends StatelessWidget {
                 ),
             ],
           ),
-          SizedBox(height: NovaSpacing.xs),
+          const SizedBox(height: NovaSpacing.xs),
         ],
         SliderTheme(
           data: SliderThemeData(
@@ -318,7 +318,7 @@ class _NovaSliderTrackShape extends SliderTrackShape {
     canvas.drawRRect(
       RRect.fromRectAndRadius(
         trackRect,
-        Radius.circular(NovaRadius.full),
+        const Radius.circular(NovaRadius.full),
       ),
       paint,
     );
@@ -337,7 +337,7 @@ class _NovaSliderTrackShape extends SliderTrackShape {
     canvas.drawRRect(
       RRect.fromRectAndRadius(
         activeRect,
-        Radius.circular(NovaRadius.full),
+        const Radius.circular(NovaRadius.full),
       ),
       activePaint,
     );

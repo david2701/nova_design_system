@@ -111,7 +111,7 @@ class NovaDatePicker extends StatelessWidget {
             labelText!,
             style: _getLabelStyle(),
           ),
-          SizedBox(height: NovaSpacing.xs),
+          const SizedBox(height: NovaSpacing.xs),
         ],
         InkWell(
           onTap: isDisabled || isLoading ? null : () => _showDatePicker(context),
@@ -134,7 +134,7 @@ class NovaDatePicker extends StatelessWidget {
                     size: _getIconSize(),
                     color: _getIconColor(),
                   ),
-                  SizedBox(width: NovaSpacing.sm),
+                  const SizedBox(width: NovaSpacing.sm),
                 ],
                 Expanded(
                   child: Text(
@@ -148,7 +148,7 @@ class NovaDatePicker extends StatelessWidget {
                   SizedBox(
                     width: _getIconSize(),
                     height: _getIconSize(),
-                    child: CircularProgressIndicator(
+                    child: const CircularProgressIndicator(
                       strokeWidth: 2,
                       valueColor: AlwaysStoppedAnimation<Color>(NovaColors.primary),
                     ),
@@ -170,7 +170,7 @@ class NovaDatePicker extends StatelessWidget {
           ),
         ),
         if (helperText != null || errorText != null) ...[
-          SizedBox(height: NovaSpacing.xs),
+          const SizedBox(height: NovaSpacing.xs),
           Text(
             errorText ?? helperText!,
             style: _getHelperStyle(errorText != null),

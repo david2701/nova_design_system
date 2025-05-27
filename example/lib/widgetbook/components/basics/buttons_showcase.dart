@@ -48,7 +48,7 @@ class NovaButtonShowcase extends StatelessWidget {
           
           _buildVariantSection('Primary Buttons', [
             _ButtonDemo('Default', NovaButton(onPressed: () {}, child: const Text('Primary Button'))),
-            _ButtonDemo('Disabled', NovaButton(onPressed: null, child: const Text('Disabled Button'))),
+            _ButtonDemo('Disabled', const NovaButton(onPressed: null, child: Text('Disabled Button'))),
             _ButtonDemo('Loading', NovaButton(onPressed: () {}, isLoading: true, child: const Text('Loading...'))),
           ]),
           
@@ -113,7 +113,7 @@ class NovaElevatedButtonShowcase extends StatelessWidget {
           
           _buildVariantSection('States', [
             _ButtonDemo('Default', NovaElevatedButton(onPressed: () {}, text: 'Elevated Button')),
-            _ButtonDemo('Disabled', NovaElevatedButton(onPressed: null, text: 'Disabled')),
+            _ButtonDemo('Disabled', const NovaElevatedButton(onPressed: null, text: 'Disabled')),
             _ButtonDemo('Loading', NovaElevatedButton(onPressed: () {}, isLoading: true, text: 'Loading...')),
           ]),
           
@@ -164,7 +164,7 @@ class NovaOutlinedButtonShowcase extends StatelessWidget {
           
           _buildVariantSection('States', [
             _ButtonDemo('Default', NovaOutlinedButton(onPressed: () {}, text: 'Outlined Button')),
-            _ButtonDemo('Disabled', NovaOutlinedButton(onPressed: null, text: 'Disabled')),
+            _ButtonDemo('Disabled', const NovaOutlinedButton(onPressed: null, text: 'Disabled')),
             _ButtonDemo('Loading', NovaOutlinedButton(onPressed: () {}, isLoading: true, text: 'Loading...')),
           ]),
           
@@ -195,7 +195,7 @@ class NovaTextButtonShowcase extends StatelessWidget {
           
           _buildVariantSection('States', [
             _ButtonDemo('Default', NovaTextButton(onPressed: () {}, text: 'Text Button')),
-            _ButtonDemo('Disabled', NovaTextButton(onPressed: null, text: 'Disabled')),
+            _ButtonDemo('Disabled', const NovaTextButton(onPressed: null, text: 'Disabled')),
             _ButtonDemo('Loading', NovaTextButton(onPressed: () {}, isLoading: true, text: 'Loading...')),
           ]),
           
@@ -238,7 +238,7 @@ class NovaIconButtonShowcase extends StatelessWidget {
           
           _buildVariantSection('States', [
             _ButtonDemo('Default', NovaIconButton(onPressed: () {}, icon: const Icon(Icons.settings))),
-            _ButtonDemo('Disabled', NovaIconButton(onPressed: null, icon: const Icon(Icons.settings))),
+            _ButtonDemo('Disabled', const NovaIconButton(onPressed: null, icon: Icon(Icons.settings))),
             _ButtonDemo('Loading', NovaIconButton(onPressed: () {}, icon: const Icon(Icons.settings), isLoading: true)),
           ]),
           
@@ -283,7 +283,7 @@ class NovaFabShowcase extends StatelessWidget {
           
           _buildVariantSection('States', [
             _ButtonDemo('Default', NovaFab(onPressed: () {}, icon: const Icon(Icons.add))),
-            _ButtonDemo('Disabled', NovaFab(onPressed: null, icon: const Icon(Icons.add))),
+            _ButtonDemo('Disabled', const NovaFab(onPressed: null, icon: Icon(Icons.add))),
             _ButtonDemo('Loading', NovaFab(onPressed: () {}, isLoading: true, icon: const Icon(Icons.add))),
           ]),
           
@@ -361,7 +361,7 @@ Widget _buildDemoCard(_ButtonDemo demo) {
       border: Border.all(color: Colors.grey.shade200),
       boxShadow: [
         BoxShadow(
-          color: Colors.black.withOpacity(0.05),
+          color: Colors.black.withValues(alpha: 0.05),
           blurRadius: 8,
           offset: const Offset(0, 2),
         ),

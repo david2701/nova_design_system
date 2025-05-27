@@ -164,146 +164,146 @@ class NovaDividerShowcase extends StatelessWidget {
           const SizedBox(height: 32),
           
           _buildVariantSection('Basic Dividers', [
-            _ComponentDemo('Horizontal', Column(
+            _ComponentDemo('Horizontal', const Column(
               children: [
-                const Text('Content above'),
-                const SizedBox(height: 8),
+                Text('Content above'),
+                SizedBox(height: 8),
                 NovaDivider(),
-                const SizedBox(height: 8),
-                const Text('Content below'),
+                SizedBox(height: 8),
+                Text('Content below'),
               ],
             )),
-            _ComponentDemo('Vertical', Row(
+            _ComponentDemo('Vertical', const Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Text('Left'),
-                const SizedBox(width: 8),
+                Text('Left'),
+                SizedBox(width: 8),
                 SizedBox(
                   height: 40,
                   child: NovaDivider(
                     orientation: NovaDividerOrientation.vertical,
                   ),
                 ),
-                const SizedBox(width: 8),
-                const Text('Right'),
+                SizedBox(width: 8),
+                Text('Right'),
               ],
             )),
           ]),
           
           _buildVariantSection('Divider Variants', [
-            _ComponentDemo('Primary', Column(
+            _ComponentDemo('Primary', const Column(
               children: [
-                const Text('Primary divider'),
-                const SizedBox(height: 8),
+                Text('Primary divider'),
+                SizedBox(height: 8),
                 NovaDivider(variant: NovaDividerVariant.primary),
-                const SizedBox(height: 8),
-                const Text('Content below'),
+                SizedBox(height: 8),
+                Text('Content below'),
               ],
             )),
-            _ComponentDemo('Secondary', Column(
+            _ComponentDemo('Secondary', const Column(
               children: [
-                const Text('Secondary divider'),
-                const SizedBox(height: 8),
+                Text('Secondary divider'),
+                SizedBox(height: 8),
                 NovaDivider(variant: NovaDividerVariant.secondary),
-                const SizedBox(height: 8),
-                const Text('Content below'),
+                SizedBox(height: 8),
+                Text('Content below'),
               ],
             )),
-            _ComponentDemo('Neutral', Column(
+            _ComponentDemo('Neutral', const Column(
               children: [
-                const Text('Neutral divider'),
-                const SizedBox(height: 8),
+                Text('Neutral divider'),
+                SizedBox(height: 8),
                 NovaDivider(variant: NovaDividerVariant.neutral),
-                const SizedBox(height: 8),
-                const Text('Content below'),
+                SizedBox(height: 8),
+                Text('Content below'),
               ],
             )),
           ]),
           
           _buildVariantSection('Divider Sizes', [
-            _ComponentDemo('Small', Column(
+            _ComponentDemo('Small', const Column(
               children: [
-                const Text('Small divider'),
-                const SizedBox(height: 8),
+                Text('Small divider'),
+                SizedBox(height: 8),
                 NovaDivider(size: NovaDividerSize.small),
-                const SizedBox(height: 8),
-                const Text('Content below'),
+                SizedBox(height: 8),
+                Text('Content below'),
               ],
             )),
-            _ComponentDemo('Medium', Column(
+            _ComponentDemo('Medium', const Column(
               children: [
-                const Text('Medium divider'),
-                const SizedBox(height: 8),
+                Text('Medium divider'),
+                SizedBox(height: 8),
                 NovaDivider(size: NovaDividerSize.medium),
-                const SizedBox(height: 8),
-                const Text('Content below'),
+                SizedBox(height: 8),
+                Text('Content below'),
               ],
             )),
-            _ComponentDemo('Large', Column(
+            _ComponentDemo('Large', const Column(
               children: [
-                const Text('Large divider'),
-                const SizedBox(height: 8),
+                Text('Large divider'),
+                SizedBox(height: 8),
                 NovaDivider(size: NovaDividerSize.large),
-                const SizedBox(height: 8),
-                const Text('Content below'),
+                SizedBox(height: 8),
+                Text('Content below'),
               ],
             )),
           ]),
           
           _buildVariantSection('Divider with Text', [
-            _ComponentDemo('With Label', Column(
+            _ComponentDemo('With Label', const Column(
               children: [
-                const Text('Section 1'),
-                const SizedBox(height: 8),
+                Text('Section 1'),
+                SizedBox(height: 8),
                 NovaDivider(
                   text: 'OR',
                 ),
-                const SizedBox(height: 8),
-                const Text('Section 2'),
+                SizedBox(height: 8),
+                Text('Section 2'),
               ],
             )),
-            _ComponentDemo('Custom Text', Column(
+            _ComponentDemo('Custom Text', const Column(
               children: [
-                const Text('Before'),
-                const SizedBox(height: 8),
+                Text('Before'),
+                SizedBox(height: 8),
                 NovaDivider(
                   text: 'CONTINUE',
                   variant: NovaDividerVariant.primary,
                 ),
-                const SizedBox(height: 8),
-                const Text('After'),
+                SizedBox(height: 8),
+                Text('After'),
               ],
             )),
           ]),
           
           _buildVariantSection('Orientation Examples', [
-            _ComponentDemo('Horizontal List', Column(
+            _ComponentDemo('Horizontal List', const Column(
               children: [
-                const Text('Item 1'),
+                Text('Item 1'),
                 NovaDivider(),
-                const Text('Item 2'),
+                Text('Item 2'),
                 NovaDivider(),
-                const Text('Item 3'),
+                Text('Item 3'),
               ],
             )),
-            _ComponentDemo('Vertical List', Row(
+            _ComponentDemo('Vertical List', const Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Text('A'),
+                Text('A'),
                 SizedBox(
                   height: 30,
                   child: NovaDivider(
                     orientation: NovaDividerOrientation.vertical,
                   ),
                 ),
-                const Text('B'),
+                Text('B'),
                 SizedBox(
                   height: 30,
                   child: NovaDivider(
                     orientation: NovaDividerOrientation.vertical,
                   ),
                 ),
-                const Text('C'),
+                Text('C'),
               ],
             )),
           ]),
@@ -374,7 +374,7 @@ Widget _buildDemoCard(_ComponentDemo demo) {
       border: Border.all(color: Colors.grey.shade200),
       boxShadow: [
         BoxShadow(
-          color: Colors.black.withOpacity(0.05),
+          color: Colors.black.withValues(alpha: 0.05),
           blurRadius: 8,
           offset: const Offset(0, 2),
         ),

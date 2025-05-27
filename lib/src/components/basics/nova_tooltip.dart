@@ -52,7 +52,7 @@ class NovaTooltip extends StatelessWidget {
         borderRadius: BorderRadius.circular(NovaRadius.md),
         boxShadow: [
           BoxShadow(
-            color: NovaColors.neutral900.withOpacity(0.1),
+            color: NovaColors.neutral900.withValues(alpha: 0.1),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -81,14 +81,14 @@ class NovaTooltip extends StatelessWidget {
   }
 
   EdgeInsets _getPadding() {
-    return EdgeInsets.symmetric(
+    return const EdgeInsets.symmetric(
       horizontal: NovaSpacing.md,
       vertical: NovaSpacing.sm,
     );
   }
 
   EdgeInsets _getMargin() {
-    return EdgeInsets.symmetric(
+    return const EdgeInsets.symmetric(
       horizontal: NovaSpacing.sm,
       vertical: NovaSpacing.xs,
     );

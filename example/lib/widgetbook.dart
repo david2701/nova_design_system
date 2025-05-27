@@ -23,7 +23,7 @@ class NovaDesignSystemApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Widgetbook.material(
-      addons: [],
+      addons: const [],
       directories: [
         WidgetbookCategory(
           name: 'Tokens',

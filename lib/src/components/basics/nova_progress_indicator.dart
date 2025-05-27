@@ -43,20 +43,20 @@ class NovaProgressIndicator extends StatelessWidget {
               if (label != null)
                 Text(
                   label!,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: NovaColors.neutral700,
                   ),
                 ),
               if (showValue && value != null)
                 Text(
                   '${(value! * 100).toInt()}%',
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: NovaColors.neutral700,
                   ),
                 ),
             ],
           ),
-          SizedBox(height: NovaSpacing.xs),
+          const SizedBox(height: NovaSpacing.xs),
         ],
         if (value != null)
           _buildDeterminateProgress()

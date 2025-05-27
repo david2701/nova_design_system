@@ -106,9 +106,9 @@ class NovaBanner extends StatelessWidget {
   Color _getBackgroundColor() {
     switch (variant) {
       case NovaBannerVariant.primary:
-        return NovaColors.primary.withOpacity(0.1);
+        return NovaColors.primary.withValues(alpha: 0.1);
       case NovaBannerVariant.secondary:
-        return NovaColors.secondary.withOpacity(0.1);
+        return NovaColors.secondary.withValues(alpha: 0.1);
       case NovaBannerVariant.surface:
         return NovaColors.neutral100;
       case NovaBannerVariant.transparent:
@@ -119,9 +119,9 @@ class NovaBanner extends StatelessWidget {
   Color _getBorderColor() {
     switch (variant) {
       case NovaBannerVariant.primary:
-        return NovaColors.primary.withOpacity(0.2);
+        return NovaColors.primary.withValues(alpha: 0.2);
       case NovaBannerVariant.secondary:
-        return NovaColors.secondary.withOpacity(0.2);
+        return NovaColors.secondary.withValues(alpha: 0.2);
       case NovaBannerVariant.surface:
         return NovaColors.neutral200;
       case NovaBannerVariant.transparent:

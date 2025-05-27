@@ -195,7 +195,6 @@ class NovaFilePicker extends StatelessWidget {
         allowedExtensions: allowedExtensions,
         withData: withData,
         withReadStream: withReadStream,
-        allowCompression: allowCompression,
         compressionQuality: compressionQuality,
         onFileLoading: onFileLoading,
       );

@@ -74,7 +74,7 @@ class NovaDropdown<T> extends StatelessWidget {
             labelText!,
             style: _getLabelStyle(),
           ),
-          SizedBox(height: NovaSpacing.xs),
+          const SizedBox(height: NovaSpacing.xs),
         ],
         Container(
           decoration: BoxDecoration(
@@ -106,7 +106,7 @@ class NovaDropdown<T> extends StatelessWidget {
           ),
         ),
         if (helperText != null || errorText != null) ...[
-          SizedBox(height: NovaSpacing.xs),
+          const SizedBox(height: NovaSpacing.xs),
           Text(
             errorText ?? helperText!,
             style: _getHelperStyle(errorText != null),
@@ -121,7 +121,7 @@ class NovaDropdown<T> extends StatelessWidget {
       return SizedBox(
         width: _getIconSize(),
         height: _getIconSize(),
-        child: CircularProgressIndicator(
+        child: const CircularProgressIndicator(
           strokeWidth: 2,
           valueColor: AlwaysStoppedAnimation<Color>(NovaColors.primary),
         ),

@@ -119,7 +119,7 @@ class NovaAdvancedAnimations {
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                color: color.withOpacity(value * 0.5),
+                color: color.withValues(alpha: value * 0.5),
                 blurRadius: radius * value,
                 spreadRadius: radius * value,
               ),

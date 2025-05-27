@@ -313,7 +313,7 @@ class _NovaProgressIndicatorShowcaseState extends State<NovaProgressIndicatorSho
                 Text('${(_progressValue * 100).round()}%'),
               ],
             )),
-            _ControlDemo('Indeterminate', NovaProgressIndicator()),
+            _ControlDemo('Indeterminate', const NovaProgressIndicator()),
             _ControlDemo('With Label', NovaProgressIndicator(
               value: _progressValue,
               label: 'Loading...',
@@ -322,34 +322,34 @@ class _NovaProgressIndicatorShowcaseState extends State<NovaProgressIndicatorSho
           ]),
           
           _buildVariantSection('Progress Variants', [
-            _ControlDemo('Primary', NovaProgressIndicator(
+            _ControlDemo('Primary', const NovaProgressIndicator(
               value: 0.6,
               variant: NovaProgressIndicatorVariant.primary,
             )),
-            _ControlDemo('Success', NovaProgressIndicator(
+            _ControlDemo('Success', const NovaProgressIndicator(
               value: 0.8,
               variant: NovaProgressIndicatorVariant.success,
             )),
-            _ControlDemo('Warning', NovaProgressIndicator(
+            _ControlDemo('Warning', const NovaProgressIndicator(
               value: 0.5,
               variant: NovaProgressIndicatorVariant.warning,
             )),
-            _ControlDemo('Danger', NovaProgressIndicator(
+            _ControlDemo('Danger', const NovaProgressIndicator(
               value: 0.3,
               variant: NovaProgressIndicatorVariant.danger,
             )),
           ]),
           
           _buildVariantSection('Progress Sizes', [
-            _ControlDemo('Small', NovaProgressIndicator(
+            _ControlDemo('Small', const NovaProgressIndicator(
               value: 0.7,
               size: NovaProgressIndicatorSize.small,
             )),
-            _ControlDemo('Medium', NovaProgressIndicator(
+            _ControlDemo('Medium', const NovaProgressIndicator(
               value: 0.7,
               size: NovaProgressIndicatorSize.medium,
             )),
-            _ControlDemo('Large', NovaProgressIndicator(
+            _ControlDemo('Large', const NovaProgressIndicator(
               value: 0.7,
               size: NovaProgressIndicatorSize.large,
             )),
@@ -438,7 +438,7 @@ Widget _buildDemoCard(_ControlDemo demo) {
       border: Border.all(color: Colors.grey.shade200),
       boxShadow: [
         BoxShadow(
-          color: Colors.black.withOpacity(0.05),
+          color: Colors.black.withValues(alpha: 0.05),
           blurRadius: 8,
           offset: const Offset(0, 2),
         ),

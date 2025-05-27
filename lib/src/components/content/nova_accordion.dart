@@ -141,9 +141,9 @@ class NovaAccordion extends StatelessWidget {
   Color _getContentBackgroundColor() {
     switch (variant) {
       case NovaAccordionVariant.primary:
-        return NovaColors.primary.withOpacity(0.05);
+        return NovaColors.primary.withValues(alpha: 0.05);
       case NovaAccordionVariant.secondary:
-        return NovaColors.secondary.withOpacity(0.05);
+        return NovaColors.secondary.withValues(alpha: 0.05);
       case NovaAccordionVariant.surface:
         return NovaColors.neutral100;
       case NovaAccordionVariant.transparent:
@@ -155,7 +155,7 @@ class NovaAccordion extends StatelessWidget {
     switch (variant) {
       case NovaAccordionVariant.primary:
       case NovaAccordionVariant.secondary:
-        return NovaColors.textInverse.withOpacity(0.1);
+        return NovaColors.textInverse.withValues(alpha: 0.1);
       case NovaAccordionVariant.surface:
       case NovaAccordionVariant.transparent:
         return NovaColors.neutral200;

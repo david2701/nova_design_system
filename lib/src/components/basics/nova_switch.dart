@@ -60,7 +60,7 @@ class NovaSwitch extends StatelessWidget {
                   borderRadius: BorderRadius.circular(NovaRadius.full),
                   boxShadow: [
                     BoxShadow(
-                      color: NovaColors.neutral900.withOpacity(0.1),
+                      color: NovaColors.neutral900.withValues(alpha: 0.1),
                       blurRadius: 4,
                       offset: const Offset(0, 2),
                     ),
@@ -78,7 +78,7 @@ class NovaSwitch extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           switchWidget,
-          SizedBox(width: NovaSpacing.sm),
+          const SizedBox(width: NovaSpacing.sm),
           Text(
             label!,
             style: TextStyle(

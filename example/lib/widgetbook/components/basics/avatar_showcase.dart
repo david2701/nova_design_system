@@ -26,88 +26,88 @@ class NovaAvatarShowcase extends StatelessWidget {
           const SizedBox(height: 32),
           
           _buildVariantSection('Sizes', [
-            _AvatarDemo('Small', NovaAvatar(
+            _AvatarDemo('Small', const NovaAvatar(
               size: NovaAvatarSize.small,
               initials: 'SM',
             )),
-            _AvatarDemo('Medium', NovaAvatar(
+            _AvatarDemo('Medium', const NovaAvatar(
               size: NovaAvatarSize.medium,
               initials: 'MD',
             )),
-            _AvatarDemo('Large', NovaAvatar(
+            _AvatarDemo('Large', const NovaAvatar(
               size: NovaAvatarSize.large,
               initials: 'LG',
             )),
           ]),
           
           _buildVariantSection('With Images', [
-            _AvatarDemo('Network Image', NovaAvatar(
+            _AvatarDemo('Network Image', const NovaAvatar(
               size: NovaAvatarSize.large,
-              image: const NetworkImage('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'),
+              image: NetworkImage('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'),
             )),
-            _AvatarDemo('Asset Image', NovaAvatar(
+            _AvatarDemo('Asset Image', const NovaAvatar(
               size: NovaAvatarSize.large,
-              image: const AssetImage('assets/images/avatar.png'),
+              image: AssetImage('assets/images/avatar.png'),
             )),
           ]),
           
           _buildVariantSection('With Initials', [
-            _AvatarDemo('Two Letters', NovaAvatar(
+            _AvatarDemo('Two Letters', const NovaAvatar(
               size: NovaAvatarSize.large,
               initials: 'JD',
             )),
-            _AvatarDemo('One Letter', NovaAvatar(
+            _AvatarDemo('One Letter', const NovaAvatar(
               size: NovaAvatarSize.large,
               initials: 'A',
             )),
-            _AvatarDemo('Three Letters', NovaAvatar(
+            _AvatarDemo('Three Letters', const NovaAvatar(
               size: NovaAvatarSize.large,
               initials: 'ABC',
             )),
           ]),
           
           _buildVariantSection('With Icons', [
-            _AvatarDemo('Person Icon', NovaAvatar(
+            _AvatarDemo('Person Icon', const NovaAvatar(
               size: NovaAvatarSize.large,
               icon: Icons.person,
             )),
-            _AvatarDemo('Group Icon', NovaAvatar(
+            _AvatarDemo('Group Icon', const NovaAvatar(
               size: NovaAvatarSize.large,
               icon: Icons.group,
             )),
-            _AvatarDemo('Business Icon', NovaAvatar(
+            _AvatarDemo('Business Icon', const NovaAvatar(
               size: NovaAvatarSize.large,
               icon: Icons.business,
             )),
           ]),
           
           _buildVariantSection('Variants', [
-            _AvatarDemo('Primary', NovaAvatar(
+            _AvatarDemo('Primary', const NovaAvatar(
               size: NovaAvatarSize.large,
               variant: NovaAvatarVariant.primary,
               initials: 'P',
             )),
-            _AvatarDemo('Secondary', NovaAvatar(
+            _AvatarDemo('Secondary', const NovaAvatar(
               size: NovaAvatarSize.large,
               variant: NovaAvatarVariant.secondary,
               initials: 'S',
             )),
-            _AvatarDemo('Success', NovaAvatar(
+            _AvatarDemo('Success', const NovaAvatar(
               size: NovaAvatarSize.large,
               variant: NovaAvatarVariant.success,
               initials: 'S',
             )),
-            _AvatarDemo('Warning', NovaAvatar(
+            _AvatarDemo('Warning', const NovaAvatar(
               size: NovaAvatarSize.large,
               variant: NovaAvatarVariant.warning,
               initials: 'W',
             )),
-            _AvatarDemo('Danger', NovaAvatar(
+            _AvatarDemo('Danger', const NovaAvatar(
               size: NovaAvatarSize.large,
               variant: NovaAvatarVariant.danger,
               initials: 'D',
             )),
-            _AvatarDemo('Neutral', NovaAvatar(
+            _AvatarDemo('Neutral', const NovaAvatar(
               size: NovaAvatarSize.large,
               variant: NovaAvatarVariant.neutral,
               initials: 'N',
@@ -120,7 +120,7 @@ class NovaAvatarShowcase extends StatelessWidget {
               initials: 'CT',
               onTap: () => print('Avatar tapped'),
             )),
-            _AvatarDemo('Disabled', NovaAvatar(
+            _AvatarDemo('Disabled', const NovaAvatar(
               size: NovaAvatarSize.large,
               initials: 'DS',
               isDisabled: true,
@@ -130,20 +130,20 @@ class NovaAvatarShowcase extends StatelessWidget {
           _buildVariantSection('Group Avatars', [
             _AvatarDemo('Avatar Group', Row(
               children: [
-                NovaAvatar(
+                const NovaAvatar(
                   size: NovaAvatarSize.medium,
-                  image: const NetworkImage('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'),
+                  image: NetworkImage('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'),
                 ),
                 Transform.translate(
                   offset: const Offset(-8, 0),
-                  child: NovaAvatar(
+                  child: const NovaAvatar(
                     size: NovaAvatarSize.medium,
-                    image: const NetworkImage('https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face'),
+                    image: NetworkImage('https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face'),
                   ),
                 ),
                 Transform.translate(
                   offset: const Offset(-16, 0),
-                  child: NovaAvatar(
+                  child: const NovaAvatar(
                     size: NovaAvatarSize.medium,
                     variant: NovaAvatarVariant.neutral,
                     initials: '+2',
@@ -217,7 +217,7 @@ class NovaAvatarShowcase extends StatelessWidget {
         border: Border.all(color: Colors.grey.shade200),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),

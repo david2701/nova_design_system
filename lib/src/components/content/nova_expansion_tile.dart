@@ -154,9 +154,9 @@ class NovaExpansionTile extends StatelessWidget {
   Color _getBackgroundColor() {
     switch (variant) {
       case NovaExpansionTileVariant.primary:
-        return NovaColors.primary.withOpacity(0.05);
+        return NovaColors.primary.withValues(alpha: 0.05);
       case NovaExpansionTileVariant.secondary:
-        return NovaColors.secondary.withOpacity(0.05);
+        return NovaColors.secondary.withValues(alpha: 0.05);
       case NovaExpansionTileVariant.surface:
         return NovaColors.surface;
       case NovaExpansionTileVariant.transparent:

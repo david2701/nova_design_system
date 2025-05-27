@@ -168,7 +168,7 @@ class NovaPagination extends StatelessWidget {
     switch (variant) {
       case NovaPaginationVariant.primary:
       case NovaPaginationVariant.secondary:
-        return NovaColors.textInverse.withOpacity(0.1);
+        return NovaColors.textInverse.withValues(alpha: 0.1);
       case NovaPaginationVariant.surface:
       case NovaPaginationVariant.transparent:
         return NovaColors.neutral200;
@@ -190,7 +190,7 @@ class NovaPagination extends StatelessWidget {
     switch (variant) {
       case NovaPaginationVariant.primary:
       case NovaPaginationVariant.secondary:
-        return NovaColors.textInverse.withOpacity(0.3);
+        return NovaColors.textInverse.withValues(alpha: 0.3);
       case NovaPaginationVariant.surface:
       case NovaPaginationVariant.transparent:
         return NovaColors.neutral400;

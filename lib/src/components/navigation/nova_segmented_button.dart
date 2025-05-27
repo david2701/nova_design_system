@@ -61,22 +61,22 @@ class NovaSegmentedButton<T> extends StatelessWidget {
 
   ButtonStyle _getButtonStyle() {
     return ButtonStyle(
-      backgroundColor: MaterialStateProperty.resolveWith<Color>(
+      backgroundColor: WidgetStateProperty.resolveWith<Color>(
         (states) => _getBackgroundColor(states),
       ),
-      foregroundColor: MaterialStateProperty.resolveWith<Color>(
+      foregroundColor: WidgetStateProperty.resolveWith<Color>(
         (states) => _getForegroundColor(states),
       ),
-      side: MaterialStateProperty.resolveWith<BorderSide>(
+      side: WidgetStateProperty.resolveWith<BorderSide>(
         (states) => _getBorderSide(states),
       ),
-      padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+      padding: WidgetStateProperty.all<EdgeInsetsGeometry>(
         _getPadding(),
       ),
-      textStyle: MaterialStateProperty.all<TextStyle>(
+      textStyle: WidgetStateProperty.all<TextStyle>(
         _getTextStyle(),
       ),
-      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
         RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(
             size == NovaSegmentedButtonSize.small ? 8 : 12,
@@ -86,8 +86,8 @@ class NovaSegmentedButton<T> extends StatelessWidget {
     );
   }
 
-  Color _getBackgroundColor(Set<MaterialState> states) {
-    if (states.contains(MaterialState.selected)) {
+  Color _getBackgroundColor(Set<WidgetState> states) {
+    if (states.contains(WidgetState.selected)) {
       switch (variant) {
         case NovaSegmentedButtonVariant.primary:
           return NovaColors.primary;
@@ -110,8 +110,8 @@ class NovaSegmentedButton<T> extends StatelessWidget {
     }
   }
 
-  Color _getForegroundColor(Set<MaterialState> states) {
-    if (states.contains(MaterialState.selected)) {
+  Color _getForegroundColor(Set<WidgetState> states) {
+    if (states.contains(WidgetState.selected)) {
       switch (variant) {
         case NovaSegmentedButtonVariant.primary:
         case NovaSegmentedButtonVariant.secondary:
@@ -125,33 +125,33 @@ class NovaSegmentedButton<T> extends StatelessWidget {
     switch (variant) {
       case NovaSegmentedButtonVariant.primary:
       case NovaSegmentedButtonVariant.secondary:
-        return NovaColors.textInverse.withOpacity(0.6);
+        return NovaColors.textInverse.withValues(alpha: 0.6);
       case NovaSegmentedButtonVariant.surface:
       case NovaSegmentedButtonVariant.transparent:
         return NovaColors.neutral500;
     }
   }
 
-  BorderSide _getBorderSide(Set<MaterialState> states) {
-    if (states.contains(MaterialState.selected)) {
+  BorderSide _getBorderSide(Set<WidgetState> states) {
+    if (states.contains(WidgetState.selected)) {
       switch (variant) {
         case NovaSegmentedButtonVariant.primary:
-          return BorderSide(color: NovaColors.primary);
+          return const BorderSide(color: NovaColors.primary);
         case NovaSegmentedButtonVariant.secondary:
-          return BorderSide(color: NovaColors.secondary);
+          return const BorderSide(color: NovaColors.secondary);
         case NovaSegmentedButtonVariant.surface:
         case NovaSegmentedButtonVariant.transparent:
-          return BorderSide(color: NovaColors.primary);
+          return const BorderSide(color: NovaColors.primary);
       }
     }
 
     switch (variant) {
       case NovaSegmentedButtonVariant.primary:
       case NovaSegmentedButtonVariant.secondary:
-        return BorderSide(color: NovaColors.textInverse.withOpacity(0.1));
+        return BorderSide(color: NovaColors.textInverse.withValues(alpha: 0.1));
       case NovaSegmentedButtonVariant.surface:
       case NovaSegmentedButtonVariant.transparent:
-        return BorderSide(color: NovaColors.neutral200);
+        return const BorderSide(color: NovaColors.neutral200);
     }
   }
 

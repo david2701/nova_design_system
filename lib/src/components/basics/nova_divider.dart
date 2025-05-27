@@ -34,7 +34,7 @@ class NovaDivider extends StatelessWidget {
             child: _buildLine(),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: NovaSpacing.md),
+            padding: const EdgeInsets.symmetric(horizontal: NovaSpacing.md),
             child: Text(
               text!,
               style: TextStyle(

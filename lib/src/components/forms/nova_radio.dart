@@ -63,11 +63,11 @@ class NovaRadio<T> extends StatelessWidget {
                 groupValue: groupValue,
                 onChanged: isDisabled ? null : onChanged,
                 activeColor: _getActiveColor(),
-                fillColor: MaterialStateProperty.resolveWith((states) {
-                  if (states.contains(MaterialState.disabled)) {
+                fillColor: WidgetStateProperty.resolveWith((states) {
+                  if (states.contains(WidgetState.disabled)) {
                     return NovaColors.neutral300;
                   }
-                  if (states.contains(MaterialState.selected)) {
+                  if (states.contains(WidgetState.selected)) {
                     return _getActiveColor();
                   }
                   return NovaColors.neutral400;
@@ -75,7 +75,7 @@ class NovaRadio<T> extends StatelessWidget {
               ),
             ),
             if (label != null) ...[
-              SizedBox(width: NovaSpacing.sm),
+              const SizedBox(width: NovaSpacing.sm),
               Text(
                 label!,
                 style: _getLabelStyle(),
@@ -84,7 +84,7 @@ class NovaRadio<T> extends StatelessWidget {
           ],
         ),
         if (helperText != null || errorText != null) ...[
-          SizedBox(height: NovaSpacing.xs),
+          const SizedBox(height: NovaSpacing.xs),
           Text(
             errorText ?? helperText!,
             style: _getHelperStyle(errorText != null),
