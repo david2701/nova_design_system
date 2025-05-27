@@ -46,6 +46,30 @@ app.*.map.json
 # Coverage
 coverage/
 
+# Example app specific ignores
+example/.dart_tool/
+example/.flutter-plugins
+example/.flutter-plugins-dependencies
+example/.packages
+example/build/
+example/ios/Flutter/.last_build_id
+example/ios/Runner.xcworkspace/
+example/ios/Runner.xcodeproj/project.xcworkspace/
+example/ios/Runner.xcodeproj/xcuserdata/
+example/ios/Flutter/flutter_export_environment.sh
+example/android/.gradle/
+example/android/app/build/
+example/android/build/
+example/android/gradle/
+example/android/gradlew
+example/android/gradlew.bat
+example/android/local.properties
+example/android/app/src/main/java/io/flutter/plugins/
+example/web/
+example/windows/
+example/linux/
+example/macos/
+
 # Exceptions to above rules.
 !**/ios/**/default.mode1v3
 !**/ios/**/default.mode2v3
