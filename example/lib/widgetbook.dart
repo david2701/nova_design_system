@@ -16,6 +16,7 @@ import 'widgetbook/components/basics/avatar_showcase.dart';
 import 'widgetbook/components/basics/badge_chip_showcase.dart';
 import 'widgetbook/components/basics/controls_showcase.dart';
 import 'widgetbook/components/basics/misc_showcase.dart';
+import 'widgetbook/components/overlay/overlay_showcase.dart';
 
 class NovaDesignSystemApp extends StatelessWidget {
   const NovaDesignSystemApp({super.key});
@@ -23,7 +24,20 @@ class NovaDesignSystemApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Widgetbook.material(
-      addons: const [],
+      addons: [
+        MaterialThemeAddon( 
+          themes: [ 
+            WidgetbookTheme( 
+              name: 'Light', 
+              data: ThemeData.light(), 
+            ), 
+            WidgetbookTheme( 
+              name: 'Dark', 
+              data: ThemeData.dark(), 
+            ), 
+          ], 
+        ), 
+      ],
       directories: [
         WidgetbookCategory(
           name: 'Tokens',
@@ -52,6 +66,12 @@ class NovaDesignSystemApp extends StatelessWidget {
                 badgeChipStories,
                 controlsStories,
                 miscStories,
+              ],
+            ),
+            WidgetbookFolder(
+              name: 'Overlay',
+              children: [
+                overlayStories,
               ],
             ),
           ],
