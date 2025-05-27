@@ -163,7 +163,7 @@ class NovaChipShowcase extends StatelessWidget {
             )),
             _ComponentDemo('Deletable', NovaChip(
               label: 'Deletable',
-              onDeleted: () => print('Deleted'),
+              onDeleted: () => debugPrint('Deleted'),
             )),
           ]),
           
@@ -209,15 +209,15 @@ class NovaChipShowcase extends StatelessWidget {
             _ComponentDemo('Selectable', NovaChip(
               label: 'Selectable',
               isSelected: true,
-              onSelected: (selected) => print('Selected: $selected'),
+              onSelected: (selected) => debugPrint('Selected: $selected'),
             )),
             _ComponentDemo('Deletable', NovaChip(
               label: 'Deletable',
-              onDeleted: () => print('Deleted'),
+              onDeleted: () => debugPrint('Deleted'),
             )),
             _ComponentDemo('With Custom Delete', NovaChip(
               label: 'Custom Delete',
-              onDeleted: () => print('Deleted'),
+              onDeleted: () => debugPrint('Deleted'),
               deleteIcon: const Icon(Icons.remove_circle, size: 16),
             )),
           ]),

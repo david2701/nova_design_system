@@ -118,7 +118,7 @@ class NovaAvatarShowcase extends StatelessWidget {
             _AvatarDemo('Clickable', NovaAvatar(
               size: NovaAvatarSize.large,
               initials: 'CT',
-              onTap: () => print('Avatar tapped'),
+              onTap: () => debugPrint('Avatar tapped'),
             )),
             _AvatarDemo('Disabled', const NovaAvatar(
               size: NovaAvatarSize.large,

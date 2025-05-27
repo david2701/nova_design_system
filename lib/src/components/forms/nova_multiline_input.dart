@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:nova_design_system/nova_design_system.dart';
-import 'nova_text_field.dart';
 
 /// A multiline input component for the Nova design system
 class NovaMultilineInput extends NovaTextField {

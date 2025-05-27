@@ -31,7 +31,7 @@ class NovaSliderShowcase extends StatefulWidget {
 class _NovaSliderShowcaseState extends State<NovaSliderShowcase> {
   double _basicValue = 0.5;
   double _steppedValue = 0.5;
-  double _disabledValue = 0.3;
+  final double _disabledValue = 0.3;
 
   @override
   Widget build(BuildContext context) {
